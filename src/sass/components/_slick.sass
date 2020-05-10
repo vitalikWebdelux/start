@@ -1,0 +1,64 @@
+.slick-arrow
+	border: 0
+	background: $dl-white
+	position: absolute 
+	z-index: 10
+	color: $dl-dark
+	border-radius: 50%
+	width: 62px
+	height: 62px
+	line-height: 6rem
+	padding: 0
+	bottom: 5rem
+	right: 50%		
+	transform: translateX(50%)
+	transition: all .3s ease
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+	+mq(1400px)
+		top: auto
+		bottom: 50px
+
+	&:hover
+		background: $dl-red
+		&::before
+			color: $dl-white
+
+	&::before
+		font-family: ci
+		font-size: 19px
+		position: absolute	
+		top: 50%	
+		left: 50%	
+		transform: translate(-50%, -50%)
+		+mq(xl)
+			font-size: 16px
+
+	&:focus
+		outline: none
+
+
+	+mq(xl)
+		width: 4rem
+		height: 4rem
+		bottom: 55px
+		line-height: 4rem
+
+	&.slick-next
+		transform: translateX(100%)
+
+	&.slick-prev
+		transform: translateX(0%)
+		
+
+	&--next
+		top: 50%
+		right: 30px
+		transform: translateX(-50%) rotate(180deg)
+		
+	&--prev
+		top: 50%
+		left: 30px
+		
+.slick-list, .slick-track
+	height: 100%
